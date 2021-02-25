@@ -37,13 +37,85 @@ sound.src = "sound.mp3";
   margin: 4px 2px;
   cursor: pointer;
 }
+	
+	html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 		    
 </style>
 		<center><p><h3>“Nung dumating ka” i felt that! Sobrang saya ko sa taong mahal ko ngayon sobrang iniba niya pag tingin ko love. Siya yung naging ilaw ko sa madilim kung mundo! Pinasaya niya binago niya yung mundo ko💗 hinding hindi koto iiwan kahit anong mangyari sa dami ng pinagdaanan ko ngayon ko lng talaga naramdaman yung tunay na pagmamahal❤️</h3></p>
 		<img src="sha.png" alt="comment">
 		    <p><h2>by shadeka tan</h2></p>
 			  <h1><i>To Play Music click the button below</h1></i>
-	   <center><input type="button" class="button" onmousedown="sound.play()" onclick="checkscope( )" value="Music" /><center>
+	   <center><input type="button" class="button" class="glow-on-hover" onmousedown="sound.play()" onclick="checkscope( )" value="Music" /><center>
 		   <img src="nick.jpg" width="100" height="100" alt="comment">
 		   <p><em><h2>@Made by Nickol Ruiz</h2></em>
 			  
