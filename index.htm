@@ -27,17 +27,7 @@ sound.src = "sound.mp3";
 		}
 	
 	html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
+
 
 .glow-on-hover {
     width: 220px;
@@ -73,7 +63,9 @@ body {
     color: #000
 }
 
-
+.glow-on-hover:active:after {
+    background: transparent;
+}
 
 .glow-on-hover:hover:before {
     opacity: 1;
