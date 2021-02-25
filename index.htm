@@ -8,6 +8,8 @@ var name = prompt("Do you love music?")
 alert("Hope you like some of my music, Thank You");
 window.location.href = "https://awesome-keller-cf242a.netlify.app";
 }
+			var sound = new Audio();
+sound.src = "sound.mp3";
 
 //-->	
 </script><right>
@@ -41,7 +43,7 @@ window.location.href = "https://awesome-keller-cf242a.netlify.app";
 		<img src="sha.png" alt="comment">
 		    <p><h2>by shadeka tan</h2></p>
 			  <h1><i>To Play Music click the button below</h1></i>
-	   <center><input type="button" class="button" onclick="checkscope( )" value="Music" /><center>
+	   <center><input type="button" class="button" onmousedown="sound.play()" onclick="checkscope( )" value="Music" /><center>
 		   <img src="nick.jpg" width="100" height="100" alt="comment">
 		   <p><em><h2>@Made by Nickol Ruiz</h2></em>
 			  
